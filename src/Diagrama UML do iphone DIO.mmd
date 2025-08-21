@@ -1,0 +1,40 @@
+classDiagram
+    class Iphone {
+        +ReprodutorMusical reprodutorMusical
+        +AparelhoTelefonico aparelhoTelefonico
+        +NavegadorInternet navegadorInternet
+        +tocar()
+        +pausar()
+        +selecionarMusica()
+        +ligar()
+        +atender()
+        +iniciarCorreioDeVoz()
+        +exibirPagina()
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class ReprodutorMusical {
+        <<Interface>>
+        +tocar()
+        +pausar()
+        +selecionarMusica()
+    }
+
+    class AparelhoTelefonico {
+        <<Interface>>
+        +ligar()
+        +atender()
+        +iniciarCorreioDeVoz()
+    }
+
+    class NavegadorInternet {
+        <<Interface>>
+        +exibirPagina()
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    Iphone ..|> ReprodutorMusical
+    Iphone ..|> AparelhoTelefonico
+    Iphone ..|> NavegadorInternet
